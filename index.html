@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortex</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="logo">
+        <span class="logo-icon">🌀</span>
+        <h1>Vortex</h1>
+      </div>
+      <p class="tagline">Connect without limits</p>
+
+      <!-- Login Form -->
+      <form id="login-form" class="auth-form">
+        <h2>Welcome back</h2>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+        <p class="switch-form">Need an account? <a href="#" id="show-signup">Sign Up</a></p>
+        <p id="login-error" class="error-msg"></p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signup-form" class="auth-form hidden">
+        <h2>Create an account</h2>
+        <div class="form-group">
+          <label for="signup-username">Username</label>
+          <input type="text" id="signup-username" required placeholder="cooluser" maxlength="20" autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" required placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" required placeholder="At least 6 characters" minlength="6" autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <p class="switch-form">Already have an account? <a href="#" id="show-login">Log In</a></p>
+        <p id="signup-error" class="error-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
